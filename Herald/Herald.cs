@@ -21,7 +21,7 @@ namespace Herald
             => "A plugin that automatically announces messages at certain intervals.";
 
         public override string Name
-            => "Infuse";
+            => "Herald";
 
         public override Version Version
             => new(1, 0);

@@ -9,6 +9,9 @@ namespace Herald
 {
     public class Announcement
     {
+        [JsonPropertyName("startup-interval")]
+        public int StartupInterval { get; set; }
+
         [JsonPropertyName("interval")]
         public int Interval { get; set; }
 

@@ -72,9 +72,16 @@ namespace Herald
             timer.Elapsed += (_, x)
                 => Tick(x, announcement);
 
-            timer.Start();
+            _ = Start(timer, announcement);
 
             return timer;
+        }
+
+        private void Start(Timer timer, Announcement announcement)
+        {
+            Task.Delay(announcement.StartupInterval).RunSynchronously();
+
+            timer.Start();
         }
 
         private void Tick(ElapsedEventArgs _, Announcement announcement)
